@@ -1,0 +1,120 @@
+@media only screen  and (min-width : 1224px){
+    h1 {
+    position: relative;
+    color: red;
+    text-align: center;
+    font-family:Arial;
+    font-style: oblique;
+    font-size: 40px;
+    top: 25%;
+    }
+#p1 
+{
+    position: relative;
+    color:white;
+    top: 26%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    
+}
+#p2 
+{
+    position: relative;
+    color:white;
+    top: 27%;
+    left: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+body
+{
+        background-color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+.rickroll 
+{
+    background-color: black;
+    position: relative;
+    color:white;
+    top: 29%;
+    left:40%;
+    width: 10%;
+    border: 1px solid rgb(212, 0, 255);
+    font-size: 18px;
+}
+#about 
+{
+    position: absolute;
+    bottom:2%;;
+    left:2%;
+    color:rgb(255, 0, 191);
+    width: 100%;
+    font-size: 18px;
+}
+}
+@media screen and (max-width: 960px){
+
+
+    body
+    {
+            background-color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     }
+     h1 {
+        position: absolute;
+        color: red;
+        text-align: center;
+        top: 2%;
+        left: 16%;
+        }
+        #p1 
+        {
+            position: absolute;
+            color:white;
+            top: 15%;
+            left: 5%;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            
+        }
+        #p2 
+{
+            position: absolute;
+            color:white;
+            top: 25%;
+            left: 3%;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+}
+.rickroll 
+{
+    background-color: black;
+    color:white;
+    border: 1px solid rgb(212, 0, 255);
+    font-size: 18px;
+    position: absolute;
+    top: 40%;
+}
+#id2
+{
+    left: 60%;
+}
+#id1
+{
+    left: 30%;
+}
+#about 
+{
+    position: absolute;
+    bottom:2%;;
+    left:2%;
+    color:rgb(255, 0, 191);
+    width: 100%;
+    font-size: 18px;
+}
+  
+  }
