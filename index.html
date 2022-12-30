@@ -1,26 +1,95 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<title>Home</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link href="index.css" rel="stylesheet" type="text/css" />
+  <title>home</title>
+  <style>
+    /* I used AI to rewirte this site, it did not do well but still i wanna use it */
+    body {
+      font-family: monospace;
+      background-color: #120514;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Style the command prompt */
+    .prompt {
+      color: #0f0;
+      font-size: 20px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    /* Style the command output */
+    .output {
+      margin-left: 20px;
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Style the buttons */
+    .button {
+      display: inline-block;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 15px 32px;
+      border-radius: 4px;
+      background-color: #222;
+    }
+
+    .button:hover {
+      background-color: rgb(87, 12, 72);
+    }
+
+    /* Style the cursor */
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 20px;
+      background-color: #0f0;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        background-color: transparent;
+      }
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      /* Make the output text smaller on smaller screens */
+      .output {
+        font-size: 14px;
+      }
+
+      /* Make the buttons smaller on smaller screens */
+      .button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="static-txt">root@potato:~</div>
-  <div class="typewriter">
-    <h1>whoami</h1>
-  </div>
-  <div class="more">Isla Mukheef a computer science student who loves to break things and tries her best<br>
-     to understand how things work currently studying at Istanbul Arel University.<br>
-      I am into reverse engineering and pentesing. I do write blogs about reversing<br> things and did write/test CTFs on HTB or TryHackMe.<br>
-        I do write python scripts from time to time on my GitHub account<br>
+  <div class="prompt">root@potato:~$</div> whoami <span class="cursor"></span>
+  <div class="output">
+    My name is Isla Mukheef and I am a computer science student at Istanbul Arel University. 
+    As a student, I have a strong passion for understanding how things work and enjoy reverse engineering and pentesting. 
+    I also enjoy writing about these topics on my personal blog and have experience creating and testing CTFs on platforms such as HTB and
+     TryHackMe. In my spare time, I enjoy writing Python scripts, which can be found on my GitHub account.
+<br>
+        <br>
         <a href="mailto:islamukheef@gmail.com">islamukheef@gmail.com</a><br>
-      social media: @islamukheef </div>
-<nav>
-  <a href="https://github.com/IslaMukheef">GitHub</a>
-  <a href="https://islamukheef.medium.com/">Blog</a>
-  <div class="animation start-home"></div>
-</nav>
-
+      social media: @islamukheef
+  </div>
+  <br>
+  <a href="https://islamukheef.medium.com/" class="button">Blog</a>
+  <a href="https://github.com/IslaMukheef/" class="button">GitHub</a>
 </body>
 </html>
