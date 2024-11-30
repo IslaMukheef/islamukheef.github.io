@@ -1,34 +1,111 @@
 <!DOCTYPE html>
-<html>
+<!-- pridly written in vim while my cat was taking a nap in my lap-->
+<html lang="en">
 <head>
-  <title>home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
   <style>
-    /* I used AI to rewirte this site, it did not do well but still i wanna use it */
     body {
       font-family: monospace;
       background-color: #120514;
       color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
       text-align: center;
     }
 
-    /* Style the command prompt */
     .prompt {
       color: #0f0;
       font-size: 20px;
-      margin-bottom: 10px;
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* Style the command output */
+    .whoami {
+      color: #fff;
+      margin-left: 10px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .cursor {
+      width: 10px;
+      height: 20px;
+      background-color: #fff;a
+      margin-left: 5px;
+      animation: blink 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
     .output {
-      margin-left: 20px;
-      font-size: 16px;
+      margin-top: 10px;
       line-height: 1.5;
-      max-width: 600px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
-    /* Style the buttons */
+    .neofetch-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .ascii-art {
+      /* color: #3498db; Light blue */
+      color: #ff9933;
+      white-space: pre;
+      margin-right: 20px;
+      transform: translateX(-40px); 
+    }
+
+    .neofetch-info {
+      line-height: 1.5;
+    }
+
+    .neofetch-info span {
+      color: #0f0; 
+    }
+
+    .colors {
+      display: flex;
+      margin-top: 10px;
+      justify-content: center;
+    }
+
+    .color-block {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+
+    .color-1 { background-color: red; }
+    .color-2 { background-color: green; }
+    .color-3 { background-color: yellow; }
+    .color-4 { background-color: blue; }
+    .color-5 { background-color: magenta; }
+    .color-6 { background-color: cyan; }
+    .color-7 { background-color: gray; }
+    .color-8 { background-color: white; }
+
+    a {
+      color: #0f0;
+      text-decoration: none;
+    }
+
     .button {
       display: inline-block;
       border: none;
@@ -40,56 +117,79 @@
       padding: 15px 32px;
       border-radius: 4px;
       background-color: #222;
+      margin: 10px;
     }
 
     .button:hover {
       background-color: rgb(87, 12, 72);
     }
-
-    /* Style the cursor */
-    .cursor {
-      display: inline-block;
-      width: 10px;
-      height: 20px;
-      background-color: #0f0;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      50% {
-        background-color: transparent;
-      }
-    }
-
-    /* Responsive design */
-    @media (max-width: 600px) {
-      /* Make the output text smaller on smaller screens */
-      .output {
-        font-size: 14px;
-      }
-
-      /* Make the buttons smaller on smaller screens */
-      .button {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="prompt">root@potato:~$</div> whoami <span class="cursor"></span>
-  <div class="output">
-    My name is Isla Mukheef and I am a computer science student at Istanbul Arel University. 
-    As a student, I have a strong passion for understanding how things work and enjoy reverse engineering and pentesting. 
-    I also enjoy writing about these topics on my personal blog and have experience creating and testing CTFs on platforms such as HTB and
-     TryHackMe. In my spare time, I enjoy writing Python scripts, which can be found on my GitHub account.
-<br>
-        <br>
-        <a href="mailto:islamukheef@gmail.com">islamukheef@gmail.com</a><br>
-      social media: @islamukheef
+  <div class="prompt">
+    root@potato:~$ 
+    <span class="whoami">
+      whoami
+      <div class="cursor"></div>
+    </span>
   </div>
-  <br>
-  <a href="https://islamukheef.medium.com/" class="button">Blog</a>
-  <a href="https://github.com/IslaMukheef/" class="button">GitHub</a>
+  <div class="output">
+    <div class="neofetch-container">
+      <div class="ascii-art">
+        <code>
+            <!-- I tried to get ascii art of my cat Bezzun but it was too hard so i just made this one orange like him :3-->
+            ⣤⡶⢶⣦⡀
+⠀⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
+⠀⠀⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿
+⠀⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿
+⠀⠀⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
+⠀⠀⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
+⠀⠀⠀⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
+⠀⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆
+⠀⠀⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆
+⠀⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇
+⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
+⠀⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
+        </code>
+      </div>
+      <div class="neofetch-info">
+        <p><span>OS:</span> Isla x86_64</p>
+        <p><span>Host:</span> Potato-PC</p>
+        <p><span>Kernel:</span> Isla 5.15.0-custom</p>
+        <p><span>Uptime:</span> 24 years</p>
+        <p><span>Packages:</span> 42 (dpkg)</p>
+        <p><span>Shell:</span> /bin/bash 5.1.8</p>
+        <p><span>Terminal:</span> PotatoTerm v1.0</p>
+        <p><span>Resolution:</span> 1920x1080</p>
+        <p><span>Memory:</span> 8GB / 16GB</p>
+        <div class="colors">
+          <div class="color-block color-1"></div>
+          <div class="color-block color-2"></div>
+          <div class="color-block color-3"></div>
+          <div class="color-block color-4"></div>
+          <div class="color-block color-5"></div>
+          <div class="color-block color-6"></div>
+          <div class="color-block color-7"></div>
+          <div class="color-block color-8"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>Isla Mukheef is a computer science student at Istanbul Arel University.</p>
+      <p>
+      With a passion for understanding the intricacies of computer systems, Isla has delved into the world of low-level programming,
+          exploring C and Assembly. This newfound expertise complements her existing skills in reverse engineering, pentesting, and backend development. 
+          Isla enjoys sharing her knowledge and experiences through personal blog and has actively participated in CTF challenges on platforms like HTB and TryHackMe. 
+          Additionally, Isla has been involved in teaching activities at the university, sharing her knowledge of Linux, C programming, and other technical subjects with fellow students.
+      </p>
+      <p>
+        <a href="islamukheef@gmail.com">islamukheef@gmail.com</a><br>
+        Social Media: @islamukheef
+      </p>
+    </div>
+    <a href="https://islamukheef.medium.com/" class="button">Blog</a>
+    <a href="https://github.com/IslaMukheef/" class="button">GitHub</a>
+  </div>
 </body>
 </html>
