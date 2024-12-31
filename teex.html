@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teex - Terminal Text Editor</title>
+  <style>
+    body {
+    
+      font-family: monospace;
+      background-color: #120514;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+      
+    }
+
+    h1, h2, h3 {
+      color: #0f0;
+    }
+
+    a {
+      color: #ff9933;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 4px;
+      background-color: #222;
+      margin: 5px 0;
+    }
+
+    .button:hover {
+      background-color: rgb(87, 12, 72);
+    }
+  </style>
+</head>
+<body>
+  <h1>Teex - Terminal Text Editor</h1>
+  <div class="section">
+    <h2>About Teex</h2>
+    <p>
+      <strong>Teex</strong> is a terminal-based text editor written in C using the ncurses library. It is a work in progress, developed in my free time, and aims to provide a lightweight and efficient text-editing experience directly in the terminal.
+    </p>
+  </div>
+  <div class="section">
+    <h2>Features</h2>
+    <ul>
+      <li>Help window (<code>Ctrl+H</code>)</li>
+      <li>Basic text editing: inserting, deleting, and moving text</li>
+      <li>File saving (<code>Ctrl+S</code>)</li>
+      <li>Undo recent actions (<code>Ctrl+Z</code>)</li>
+      <li>Redo restored characters (<code>Ctrl+Y</code>)</li>
+      <li>Arrow key navigation</li>
+      <li>Open and edit existing files via the command line</li>
+      <li>Exit with the <code>Esc</code> key</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Source Code</h2>
+    <p>
+      The source code for <strong>Teex</strong> is available on 
+      <a href="https://github.com/IslaMukheef/teex">GitHub</a> under the 
+      <a href="https://opensource.org/licenses/MIT">MIT License</a>.<br>  
+      Contributions are welcome! Feel free to submit pull requests or open issues 
+      to help improve the project.
+    </p>
+  </div>
+  
+  <div class="section">
+    <h2>Documentation</h2>
+    <p>Check out articles about <strong>Teex</strong>:</p>
+    <ul>
+      <li><a href="https://islamukheef.medium.com/implementing-the-undo-ctrl-z-functionality-with-circular-queues-in-c-fcce951ea14f">Implementing the Undo (Ctrl + Z) Functionality with Circular Queues in C</a></li>
+      <li><a href="https://islamukheef.medium.com/implementing-the-redo-ctrl-y-functionality-with-circular-queues-in-c-26ee16c83f1b">Extending Undo logic to implement Redo(Ctrl + Y) Functionality with Circular Queues in C.</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <a href="/" class="button">Back to Home</a>
+  </div>
+</body>
+</html>
