@@ -9,195 +9,201 @@
   <title>Isla Mukheef</title>
   <style>
     body {
-      font-family: monospace;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      overflow: hidden;
-      background-image: url('background.png');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
+  font-family: monospace;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
-    body::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: inherit;
-      filter: blur(8px);
-      z-index: -1;
-    }
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(8px);
+  z-index: -1;
+}
 
-    .window {
-      background-color: rgba(18, 5, 20, 0.8);
-      border: 2px solid #444;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      max-width: 800px;
-      width: 100%;
-      margin: 20px;
-      position: relative;
-    }
+.window {
+  background-color: rgba(18, 5, 20, 0.8);
+  border: 2px solid #444;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px;
+  position: relative;
+  overflow-y: auto; 
+}
 
-    .header {
-      background-color: #222;
-      color: #fff;
-      padding: 10px;
-      border-radius: 10px 10px 0 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
+.header {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
-    .window-title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #fff;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-    }
+.window-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
 
-    .close-btn {
-      width: 15px;
-      height: 15px;
-      background-color: red;
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-      position: relative;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
+.close-btn {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
-    .close-btn:focus {
-      outline: none;
-    }
+.close-btn:focus {
+  outline: none;
+}
 
-    .close-btn:hover {
-      background-color: darkred;
-    }
+.close-btn:hover {
+  background-color: darkred;
+}
 
-    .prompt {
-      color: #0f0;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: left; 
-    }
+.prompt {
+  color: #0f0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left; 
+}
 
-    .whoami {
-      color: #fff;
-      margin-left: 10px;
-      display: inline-flex;
-      align-items: center;
-    }
+.whoami {
+  color: #fff;
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+}
 
-    .cursor {
-      width: 10px;
-      height: 20px;
-      background-color: #fff;
-      margin-left: 5px;
-      animation: blink 1s steps(2, start) infinite;
-    }
+.cursor {
+  width: 10px;
+  height: 20px;
+  background-color: #fff;
+  margin-left: 5px;
+  animation: blink 1s steps(2, start) infinite;
+}
 
-    @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
-    .output {
-      margin-top: 10px;
-      line-height: 1.5;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: left; 
-    }
+.output {
+  margin-top: 10px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left; 
+}
 
-    .button-container {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
-    .button {
-      display: inline-block;
-      border: none;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
-      padding: 15px 32px;
-      border-radius: 4px;
-      background-color: #222;
-      margin: 10px;
-    }
+.button {
+  display: inline-block;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px 32px;
+  border-radius: 4px;
+  background-color: #222;
+  margin: 10px;
+}
 
-    .button:hover {
-      background-color: rgb(87, 12, 72);
-    }
+.button:hover {
+  background-color: rgb(87, 12, 72);
+}
 
-    .blog-section {
-      margin-top: 20px;
-      text-align: left;
-    }
+.blog-section {
+  margin-top: 20px;
+  text-align: left;
+}
 
-    .blog-title {
-      font-size: 18px;
-      color: #ff9933;
-    }
+.blog-title {
+  font-size: 18px;
+  color: #ff9933;
+}
 
-    .blog-date {
-      font-size: 14px;
-      color: #aaa;
-    }
+.blog-date {
+  font-size: 14px;
+  color: #aaa;
+}
 
-    .blog-section ul {
-      list-style: none;
-      padding: 0;
-    }
+.blog-section ul {
+  list-style: none;
+  padding: 0;
+}
 
-    .blog-section li {
-      margin: 10px 0;
-    }
+.blog-section li {
+  margin: 10px 0;
+}
 
-    .email {
-      font-size: 18px;
-      color: #4CAF50;
-      font-weight: bold;
-      text-decoration: none;
-    }
+.email {
+  font-size: 18px;
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-    .email:hover {
-      text-decoration: underline;
-    }
+.email:hover {
+  text-decoration: underline;
+}
 
-    @media (max-width: 768px) {
-      .window {
-        padding: 10px;
-        max-width: 100%;
-      }
-      
-      .button-container {
-        flex-direction: column;
-      }
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
 
-      .button {
-        margin: 5px 0;
-      }
-    }
+  .window {
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .button {
+    margin: 5px 0;
+  }
+}
+
   </style>
 </head>
 <body>
